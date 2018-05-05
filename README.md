@@ -1,4 +1,4 @@
-# projeto mini-facebook
+# projeto api mini-facebook
 
 
 Sistema desenvolvido em NodeJS com o objetivo de exemplificar uma mini rede social

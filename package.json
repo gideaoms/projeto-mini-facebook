@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test nyc mocha test/**/*.test.js --exit"
   },
   "keywords": [],
   "author": "",
@@ -19,9 +19,26 @@
     "require-dir": "^1.0.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-chai-friendly": "^0.4.1",
     "eslint-plugin-import": "^2.11.0",
-    "nodemon": "^1.17.3"
+    "factory-girl": "^5.0.2",
+    "faker": "^4.1.0",
+    "mocha": "^5.1.1",
+    "node-mocks-http": "^1.5.8",
+    "nodemon": "^1.17.3",
+    "nyc": "^11.7.3",
+    "sinon": "^5.0.7"
+  },
+  "nyc": {
+    "reporter": [
+      "lcov",
+      "text-summary",
+      "html"
+    ],
+    "report-dir": "./test/coverage"
   }
 }
